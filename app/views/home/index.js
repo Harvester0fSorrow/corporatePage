@@ -1,35 +1,23 @@
-import React, { PropTypes, Component } from "react";
-import { connect } from 'react-redux';
-import * as homeActions from '../../actions/home';
-import { selector } from '../../selectors/home'
+import React from "react";
 import Header from '../helpers/header';
 import Footer from '../helpers/footer';
 import Content from '../helpers/content';
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-        const { dispatch } = this.props;
-        dispatch(homeActions.getHomeContent());
-    }
-
-    render() {
-        const { home } = this.props;
-        return (
-            <div className="body">
-              <Header />
-              <div className="content">
-                <Content content={home.content} />
-              </div>
-              <Footer />
+const Home = () => {
+    return (
+        <div className="body">
+          <Header />
+          <div className="content">
+            <div className="box">
+                <h3>Welcome!</h3>
+                <p>This page is under constant construction, that would be one of the reasons why there is almost no content in here... The other would be me focusing all the time at the react and web api.</p>
+                <p>I have started working on this page cause I needed a playground for home projects. Curently the website is contructed with a React client side, that consumes ASP.Net WebAPI. The small amount of data that needs to be stored is in azure table storage.</p>
+                <p>I plan to add blog to describe everything in depth and hopefully somebody will find it useful or at least correct... </p>
             </div>
-        );
-    }
+          </div>
+          <Footer />
+        </div>
+    );
 }
 
-Home.propTypes = {
-    home: PropTypes.object,
-    dispatch: PropTypes.func
-}
-
-export default connect(selector)(Home)
+export default Home
