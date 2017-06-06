@@ -1,23 +1,11 @@
-import React, { PropTypes, Component } from "react";
-import { connect } from 'react-redux';
+import React from "react";
 
-class Footer extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className="footer">
-                © The Big Lisowski {new Date().getFullYear()}
-            </div>
-        );
-    }
-}
-
-Footer.propTypes = {
-    metaData: PropTypes.object,
-    dispatch: PropTypes.func
+const Footer = () => {
+    return (
+        <div className="footer">
+            © The Big Lisowski {new Date().getFullYear()}
+        </div>
+    );
 }
 
 export default Footer

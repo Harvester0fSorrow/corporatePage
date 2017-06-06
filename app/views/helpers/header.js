@@ -7,9 +7,7 @@ import { Link } from 'react-router'
 class Header extends Component {
     constructor(props) {
         super(props);
-        const { dispatch } = this.props;
         this.selectOption = this.selectOption.bind(this);
-        dispatch(metaDataActions.getMenu());
     }
 
     selectOption(e){
@@ -19,21 +17,14 @@ class Header extends Component {
         }
     }
 
-    renderMenuItems() {
-        const { metaData } = this.props;
-        const { menuOptions } = metaData;
-        let lastMenuOption = menuOptions[menuOptions.length-1];
-        return menuOptions.map(menuOption => {
-            return (<Link to={menuOption.url} onClick={this.selectOption} key={menuOption.label+'label'} ><div className={menuOption.label === metaData.selectedOption ? 'option selected' : 'option' } id={menuOption.label} key={menuOption.label}>{menuOption.label}</div></Link>);
-        });
-    }
-
     render() {
+        const { metaData } = this.props;
         return (
             <div className="header">
                 <img className="dude-glasses" src='http://corporatepage.blob.core.windows.net/blob/glasses1.png' alt='glasses1'/>
                 <div className="menu">
-                    {this.renderMenuItems()}
+                    <Link to="/" onClick={this.selectOption} key='home' ><div className={'home' === metaData.selectedOption ? 'option selected' : 'option' } id='home' key='homeLabel'>Home</div></Link>
+                    <Link to="/About" onClick={this.selectOption} key='about' ><div className={'about' === metaData.selectedOption ? 'option selected' : 'option' } id='about' key='aboutLabel'>About</div></Link>
                 </div>
             </div>
         );
