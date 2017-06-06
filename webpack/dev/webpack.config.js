@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 const path = require('path');
 
-var BUILD_DIR = path.join(__dirname, '../../CorporatePage.Api/Content/dist');
+var BUILD_DIR = path.join(__dirname, '../../Content/dist');
 var APP_DIR = path.join(__dirname, '../../app');
 
 var config = {
@@ -13,7 +13,7 @@ var config = {
   module : {
     loaders : [
       {
-        test: /\.jsx?$/, 
+        test: /\.jsx?$/,
 		exclude: /node_modules/,
         loader: 'babel'
       }
