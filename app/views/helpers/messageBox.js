@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 
 class MessageBox extends Component {

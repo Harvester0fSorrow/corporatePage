@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 import * as blogActions from '../../actions/blog';
 import { selector } from '../../selectors/blog'
@@ -26,8 +26,8 @@ class Blog extends Component {
 }
 
 Blog.propTypes = {
-  blog: React.PropTypes.object,
-  dispatch: React.PropTypes.func
+  blog: PropTypes.object,
+  dispatch: PropTypes.func
 }
 
 export default connect(selector)(Blog)

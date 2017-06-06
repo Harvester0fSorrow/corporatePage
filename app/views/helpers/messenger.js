@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 
 class Messenger extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class Messenger extends Component {
 }
 
 Messenger.propTypes = {
-    about: React.PropTypes.object
+    about: PropTypes.object
 }
 
 export default Messenger

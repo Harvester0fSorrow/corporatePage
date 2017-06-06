@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 
 class Footer extends Component {
@@ -16,8 +16,8 @@ class Footer extends Component {
 }
 
 Footer.propTypes = {
-    metaData: React.PropTypes.object,
-    dispatch: React.PropTypes.func
+    metaData: PropTypes.object,
+    dispatch: PropTypes.func
 }
 
 export default Footer

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 import Header from '../helpers/header';
 import Content from '../helpers/content';
@@ -31,8 +31,8 @@ class About extends Component {
 }
 
 About.propTypes = {
-    about: React.PropTypes.object,
-    dispatch: React.PropTypes.func
+    about: PropTypes.object,
+    dispatch: PropTypes.func
 }
 
 export default connect(selector)(About)

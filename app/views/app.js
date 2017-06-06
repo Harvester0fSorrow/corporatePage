@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 
 export default class App extends Component {
     render() {
@@ -11,5 +11,5 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-    children: React.PropTypes.object.isRequired
+    children: PropTypes.object.isRequired
 };

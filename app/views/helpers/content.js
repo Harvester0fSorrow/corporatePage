@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 
 class Content extends Component {
@@ -20,7 +20,7 @@ class Content extends Component {
 }
 
 Content.propTypes = {
-    content: React.PropTypes.string
+    content: PropTypes.string
 }
 
 Content.defaultProps = {

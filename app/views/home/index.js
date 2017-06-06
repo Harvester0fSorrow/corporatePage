@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 import * as homeActions from '../../actions/home';
 import { selector } from '../../selectors/home'
@@ -27,8 +27,8 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-    home: React.PropTypes.object,
-    dispatch: React.PropTypes.func
+    home: PropTypes.object,
+    dispatch: PropTypes.func
 }
 
 export default connect(selector)(Home)

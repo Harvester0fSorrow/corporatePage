@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 import * as metaDataActions from '../../actions/metaData';
 import { selector } from '../../selectors/header';
@@ -41,8 +41,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-    metaData: React.PropTypes.object,
-    dispatch: React.PropTypes.func
+    metaData: PropTypes.object,
+    dispatch: PropTypes.func
 }
 
 export default connect(selector)(Header)

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 import Header from '../helpers/header';
 import { selector } from '../../selectors/errors'
@@ -26,8 +26,8 @@ class PageNotFound extends Component {
 }
 
 PageNotFound.propTypes = {
-    errors: React.PropTypes.object,
-    dispatch: React.PropTypes.func
+    errors: PropTypes.object,
+    dispatch: PropTypes.func
 }
 
 export default connect(selector)(PageNotFound)
