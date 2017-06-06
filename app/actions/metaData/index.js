@@ -8,7 +8,7 @@ export function getMenu(){
     return dispatch => {
         dispatch(requestedMenu);
         MetaDataApi.getMenu(content => {
-            dispatch(receivedMenu($.parseJSON(content)));
+            dispatch(receivedMenu(content));
         });
     };
 }

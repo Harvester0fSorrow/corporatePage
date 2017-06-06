@@ -21,6 +21,7 @@ class Home extends Component {
               <div className="content">
                 <Content content={home.content} />
               </div>
+              <Footer />
             </div>
         );
     }
