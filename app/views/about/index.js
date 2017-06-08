@@ -1,7 +1,6 @@
 import React from "react";
 import Header from '../helpers/header';
 import Footer from '../helpers/footer';
-import Messenger from '../helpers/messenger';
 
 const About = () => {
     return (
@@ -15,7 +14,6 @@ const About = () => {
                 <p>I enjoy researching new technologies to stay up to date, and deliver the best software and user experience possible. I am mostly working with .NET Framework, Azure and React.js but I also worked with Java and Objective C. Lately I am working in a startup that helps companies to understand their customer base.</p>
                 <p>Privately I''m an adrenaline junkie and I enjoy downhill, mountain biking, climbing and other extreme sports and activities. I own a husky named Serj, so I have to stay in shape to keep up with him during our daily walks or rather runs. As you can see I spend a lot of my free time outside "enjoying" Scottish weather. And yes, you guessed it! My general health and immunity is excellent!</p>
               </div>
-              <Messenger />
             </div>
           <Footer />
         </div>
