@@ -4,9 +4,9 @@
   "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf ./Content/dist",
-    "processCss": "myth ./myth/style.css ./Content/dist/style.css",
-    "createDist": "New-Item ./Content dist -type directory",
+    "clean": "rimraf ../nodeApi/dist",
+    "processCss": "myth ./myth/style.css ../nodeApi/dist/style.css",
+    "createDist": "New-Item ../nodeApi dist -type directory",
     "dev": "webpack -dev --config ./webpack/dev/webpack.config.js",
     "build": "webpack -p --config ./webpack/prod/webpack.config.js",
     "clean-dev-processCss": "npm run clean && npm run dev && npm run processCss",

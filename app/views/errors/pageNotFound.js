@@ -1,33 +1,21 @@
 import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 import Header from '../helpers/header';
-import { selector } from '../../selectors/errors'
-import * as errorsActions from '../../actions/errors';
+import Footer from '../helpers/footer';
 
 
-class PageNotFound extends Component {
-    constructor(props) {
-        super(props);
-        const { dispatch } = this.props;
-        dispatch(errorsActions.getPageNotFoundError());
-    }
-
-    render() {
-        const { pageNotFound } = this.props.errors
-        return (
-            <div>
-                <Header />
-                <div className="content">
-                    <p>{pageNotFound}</p>
+const PageNotFound =  () => {
+    return (
+        <div>
+            <Header />
+            <div className="content">
+                <div className="box">
+                    <h3>Sorry, Page not found.</h3>
                 </div>
             </div>
-        );
-    }
-}
+            <Footer />
+        </div>
+    );
+};
 
-PageNotFound.propTypes = {
-    errors: PropTypes.object,
-    dispatch: PropTypes.func
-}
-
-export default connect(selector)(PageNotFound)
+export default PageNotFound;

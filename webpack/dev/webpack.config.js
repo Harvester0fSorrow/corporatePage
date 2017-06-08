@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 const path = require('path');
 
-var BUILD_DIR = path.join(__dirname, '../../Content/dist');
+var BUILD_DIR = path.join(__dirname, '../../../nodeApi/dist');
 var APP_DIR = path.join(__dirname, '../../app');
 
 var config = {
