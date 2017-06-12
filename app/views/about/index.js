@@ -5,7 +5,7 @@ import Footer from '../helpers/footer';
 const About = () => {
     return (
         <div className="body">
-          <Header />
+          <Header selectedOption="about" />
             <div className="content">
               <div className="box">
                 <img className="about-image" src="http://corporatepage.blob.core.windows.net/blob/the-big-lisowski.jpg" alt="dude-glasses"/>
