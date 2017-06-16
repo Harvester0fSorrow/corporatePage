@@ -2,6 +2,8 @@ import React, { PropTypes, Component } from "react";
 import { connect } from 'react-redux';
 import { Link } from 'react-router'
 
+import './header.scss';
+
 const Header = ({selectedOption}) => {
     return (
         <div className="header">

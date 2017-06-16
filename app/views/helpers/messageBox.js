@@ -20,4 +20,4 @@ class MessageBox extends Component {
 MessageBox.propTypes = {
 }
 
-export default connect()(MessageBox)
+export default MessageBox

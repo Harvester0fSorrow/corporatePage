@@ -1,7 +1,8 @@
 import React from "react";
 import Header from '../helpers/header';
 import Footer from '../helpers/footer';
-import Content from '../helpers/content';
+
+import './home.scss';
 
 const Home = () => {
     return (
