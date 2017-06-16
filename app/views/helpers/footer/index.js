@@ -1,13 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import './footer.scss'
+import './footer.scss';
 
-const Footer = () => {
-    return (
-        <div className="footer">
-            © The Big Lisowski {new Date().getFullYear()}
-        </div>
-    );
-}
+const Footer = () =>
+  <div className="footer">
+      © The Big Lisowski {new Date().getFullYear()}
+  </div>;
 
-export default Footer
+export default Footer;

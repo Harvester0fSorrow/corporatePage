@@ -1,3 +1,4 @@
+/* eslint-env browser */
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -7,9 +8,9 @@ import routes from './routes';
 
 const store = configureStore(browserHistory);
 
-    render(
-        <Provider store={store}>
-            <Router history={browserHistory} routes={routes} />
-        </Provider>,
-        document.getElementById('app')
-    );
+render(
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes} />
+  </Provider>,
+  document.getElementById('app'),
+);

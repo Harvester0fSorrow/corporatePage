@@ -1,27 +1,23 @@
-import React, { PropTypes, Component } from "react";
-import { connect } from 'react-redux';
-import { Link } from 'react-router'
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
 import './header.scss';
 
-const Header = ({selectedOption}) => {
-    return (
-        <div className="header">
-            <img className="dude-glasses" src='http://corporatepage.blob.core.windows.net/blob/glasses1.png' alt='glasses1'/>
-            <div className="menu">
-                <Link to="/" key='home' ><div className={'home' === selectedOption ? 'option selected' : 'option' } id='home' key='homeLabel'>Home</div></Link>
-                <Link to="/About" key='about' ><div className={'about' === selectedOption ? 'option selected' : 'option' } id='about' key='aboutLabel'>About</div></Link>
-            </div>
-        </div>
-    );
-}
+const Header = ({ selectedOption }) =>
+  <div className="header">
+    <img className="dude-glasses" src='http://corporatepage.blob.core.windows.net/blob/glasses1.png' alt='glasses1'/>
+    <div className="menu">
+      <Link to="/" key='home' ><div className={ selectedOption === 'home' ? 'option selected' : 'option' } id='home' key='homeLabel'>Home</div></Link>
+      <Link to="/About" key='about' ><div className={ selectedOption === 'about' ? 'option selected' : 'option' } id='about' key='aboutLabel'>About</div></Link>
+    </div>
+  </div>;
 
 Header.propTypes = {
-    selectedOption: PropTypes.string
-}
+  selectedOption: PropTypes.string,
+};
 
 Header.defaultProps = {
-    selectedOption: 'home'
-}
+  selectedOption: 'home',
+};
 
-export default Header
+export default Header;

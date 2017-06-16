@@ -12,29 +12,39 @@ export default () => ({
   ],
   module : {
     rules : [
-      {
-        test: /\.jsx?$/,
-		exclude: /node_modules/,
-        include: path.join(__dirname, 'app'),
-        use: [
-            {
-                loader: 'babel-loader',
-                options: {
-                    babelrc: false,
-                    presets: [
-                        ['es2015', { modules: false }],
-                        'react'
-                    ],
+        {
+            test: /.jsx?$/,
+            exclude: /node_modules/,
+            enforce: 'pre',
+            use: [
+              {
+                loader: 'eslint-loader',
+              }
+            ]
+        },
+        {
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            include: path.join(__dirname, 'app'),
+            use: [
+                {
+                    loader: 'babel-loader',
+                    options: {
+                        babelrc: false,
+                        presets: [
+                            ['es2015', { modules: false }],
+                            'react'
+                        ],
+                    }
                 }
-            }
-        ]
-      },
-      {
-         test: /\.(css|scss|sass)$/,
-         use: ExtractTextPlugin.extract({
-             loader: 'css-loader!sass-loader'
-         })
-      }
+            ]
+        },
+        {
+            test: /\.(css|scss|sass)$/,
+            use: ExtractTextPlugin.extract({
+                loader: 'css-loader!sass-loader'
+            })
+        }
     ]
   }
 });
