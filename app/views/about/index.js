@@ -10,8 +10,8 @@ const About = () =>
     <div className="content">
       <div className="box">
         <img className="about-image"
-          src="http://corporatepage.blob.core.windows.net/blob/the-big-lisowski.jpg"
-          alt="dude-glasses"
+          src="/the-big-lisowski.jpg"
+          alt="the-big-lisowski"
         />
         <p>Hi! My name is Radosław Lisowski and I am a full stack developer.
         Don't sweat to much trying to pronounce my name, I know it's hard for an average English
