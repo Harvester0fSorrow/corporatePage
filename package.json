@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf ../nodeApi/dist",
     "createDist": "New-Item ../nodeApi dist -type directory",
-    "dev": "webpack -w",
+    "dev": "webpack -d -w",
     "build": "webpack -p",
     "clean-dev": "npm run clean && npm run dev",
     "clean-build": "npm run clean && npm run build"
