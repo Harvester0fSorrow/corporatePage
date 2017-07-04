@@ -31,7 +31,7 @@ body {
 
 .content {
     height: auto;
-    min-height: 85%;
+    min-height: 82%;
     display: block;
     margin: 0 auto;
     padding-top: 80px;
@@ -48,28 +48,9 @@ body {
     }
 
     .box {
-        display: inline-block;
         padding: 50px;
         background-color: white;
         margin-bottom: 20px;
     }
 
-    .messenger {
-        padding: 10px 50px 10px 50px;
-        background-color: white;
-
-        .title {
-             input {
-                  width: 100%;
-                  border-radius: 5px;
-                  border: 1px solid $optionColor;
-                  height: 30px;
-                  font-size: 1em;
-                  padding: 5px;
-             }
-             input:focus {
-                 outline-width: 0;
-             }
-        }
-    }
 }
