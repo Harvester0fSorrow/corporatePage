@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { fetchPosts } from '../../actions/blog';
+import { fetchPosts } from './actions';
 
 export const blogSelector = state => state.blog;
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, IndexRoute, Redirect } from 'react-router';
-import App from './views/app';
-import Home from './views/home';
-import About from './views/about';
-import Blog from './views/blog';
-import PageNotFound from './views/errors/pageNotFound';
+import App from './containers';
+import Home from './components/home';
+import About from './components/about';
+import Blog from './containers/blog';
+import PageNotFound from './components/errors/pageNotFound';
 
 const routes = (
   <Route path="/" component={App}>

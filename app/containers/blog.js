@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Header from '../helpers/header';
-import Footer from '../helpers/footer';
-import { selector, dispatchFunctions } from '../../selectors/blog';
+import Header from '../components/helpers/header';
+import Footer from '../components/helpers/footer';
+import { selector, dispatchFunctions } from '../store/blog/selector';
 
 class Blog extends Component {
-  constructor(props) {
-    super(props);
-
+  componentWillMount() {
     const { fetchPosts } = this.props;
     fetchPosts();
   }

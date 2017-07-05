@@ -1,14 +1,19 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
-import reducers from './reducers';
-import blogState from './initialStates/blogState';
+import reducers, { storeInitialState } from './reducers';
+import * as api from './api';
 
 export default function configureStore(history) {
   const finalCreateStore = compose(
-    applyMiddleware(thunk, routerMiddleware(history)),
+    applyMiddleware(
+      thunkMiddleware.withExtraArgument(api),
+      routerMiddleware(history),
+    ),
   )(createStore);
+
   reducers.routing = routerReducer;
+
   return finalCreateStore(combineReducers(reducers),
-    blogState);
+    storeInitialState);
 }
