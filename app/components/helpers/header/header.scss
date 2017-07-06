@@ -1,6 +1,6 @@
 $headerBackgroundColor: #333;
 $optionColor: #f1f1f1;
-$optionHoverColor: #d77bf1;
+$optionSelectedColor: #c700ff;
 
 .header {
     position: fixed;
@@ -27,14 +27,14 @@ $optionHoverColor: #d77bf1;
         }
 
         .option.selected {
-            border-bottom: 2px solid $optionHoverColor;
-            color: $optionHoverColor;
+            border-bottom: 2px solid $optionSelectedColor;
+            color: $optionSelectedColor;
             background-color: #444;
         }
 
         .option:hover {
-            border-bottom: 2px solid $optionHoverColor;
-            color: $optionHoverColor;
+            border-bottom: 2px solid $optionSelectedColor;
+            color: $optionSelectedColor;
         }
 
         a {

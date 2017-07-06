@@ -1,32 +1,32 @@
 $backgroundColor: #f1f1f1;
-$optionColor: #f1f1f1;
+$headerFontColor: #c700ff;
 $contentFontColor: #292C35;
 
 html {
-    margin:0;
-    padding:0;
-    height:100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     min-height: 100%;
-    height:100%;
-    overflow:hidden;
+    height: 100%;
+    overflow: hidden;
     font-size: 1.2em;
     font-family: 'Rubik', monospace;
     background-color: $backgroundColor;
 }
 
 .root, .app {
-    height:100%;
+    height: 100%;
 }
 
 .body {
     overflow: auto;
     height: 100%;
-    position:relative;
+    position: relative;
 }
 
 .content {
@@ -39,12 +39,14 @@ body {
     width: 80%;
     color: $contentFontColor;
 
-    h3 {
-        font-family: 'Open Sans', serif;
+    h2 {
+        margin-top: 0;
+        color: $headerFontColor;
     }
 
     p {
-        margin-top:0px;
+        margin-top: 0px;
+        text-indent: 30px;
     }
 
     .box {

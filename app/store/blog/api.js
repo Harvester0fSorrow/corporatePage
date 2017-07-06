@@ -2,9 +2,9 @@ import $ from 'jquery';
 
 export const blogUrl = '/api/blog';
 
-export const fetchPosts = () =>
+export const fetchLastPost = () =>
   $.ajax({
-    url: blogUrl,
+    url: `${blogUrl}/last`,
     type: 'GET',
     contentType: 'application/json',
   });

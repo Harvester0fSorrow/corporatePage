@@ -1,6 +1,6 @@
 const blogState =
 {
-  posts: [],
+  post: {},
 };
 
 export default blogState;

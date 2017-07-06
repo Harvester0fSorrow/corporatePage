@@ -9,7 +9,7 @@ const Home = () =>
     <Header />
     <div className="content">
       <div className="box">
-        <h3>Welcome!</h3>
+        <h2>Welcome!</h2>
         <p>This page is under constant construction, that would be one of the reasons why there is
         almost no content in here... The other would be me focusing all the time at the react and
         web api.</p>

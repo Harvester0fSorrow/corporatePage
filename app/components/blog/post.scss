@@ -1,0 +1,14 @@
+$contentFontColor: #c700ff;
+
+.blog-date {
+  float: right;
+  margin-top: 20px;
+  color: $contentFontColor;
+}
+
+.blog-title {
+  margin: 0;
+  border-bottom: 1px solid $contentFontColor;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}

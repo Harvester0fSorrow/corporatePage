@@ -4,33 +4,22 @@ import { connect } from 'react-redux';
 import Header from '../components/helpers/header';
 import Footer from '../components/helpers/footer';
 import { selector, dispatchFunctions } from '../store/blog/selector';
+import Post from '../components/blog/post';
 
 class Blog extends Component {
   componentWillMount() {
-    const { fetchPosts } = this.props;
-    fetchPosts();
+    const { fetchLastPost } = this.props;
+    fetchLastPost();
   }
 
   render() {
-    const { posts } = this.props;
-    if (posts.length === 0) {
-      return (
-        <div className="body">
-          <Header selectedOption="blog" />
-          <div className="content" />
-          <Footer />
-        </div>
-      );
-    }
+    const { post } = this.props;
+
     return (
       <div className="body">
         <Header selectedOption="blog" />
         <div className="content">
-          <div className="box">
-            <h3>{posts[0].title}</h3>
-            <p>{posts[0].desc}</p>
-            <p>{posts[0].content}</p>
-          </div>
+          <Post post={post} />
         </div>
         <Footer />
       </div>
@@ -39,8 +28,8 @@ class Blog extends Component {
 }
 
 Blog.propTypes = {
-  posts: PropTypes.array.isRequired,
-  fetchPosts: PropTypes.func.isRequired,
+  post: PropTypes.object.isRequired,
+  fetchLastPost: PropTypes.func.isRequired,
 };
 
 export default connect(selector, dispatchFunctions)(Blog);

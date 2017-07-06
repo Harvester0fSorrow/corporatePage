@@ -1,15 +1,15 @@
 import { createSelector } from 'reselect';
-import { fetchPosts } from './actions';
+import { fetchLastPost } from './actions';
 
 export const blogSelector = state => state.blog;
 
 export const selector = createSelector(
   blogSelector,
   blog => ({
-    posts: blog.posts,
+    post: blog.post,
   }),
 );
 
 export const dispatchFunctions = dispatch => ({
-  fetchPosts: () => { dispatch(fetchPosts()); },
+  fetchLastPost: () => { dispatch(fetchLastPost()); },
 });

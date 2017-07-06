@@ -1,11 +1,11 @@
 import { createAction } from 'redux-actions';
 
-export const RECEIVED_POSTS = 'RECEIVED_POSTS';
-const receivedPosts = createAction(RECEIVED_POSTS);
+export const RECEIVED_LAST_POST = 'RECEIVED_LAST_POST';
+const receivedLastPost = createAction(RECEIVED_LAST_POST);
 
-export function fetchPosts() {
+export function fetchLastPost() {
   return (dispatch, getState, api) =>
-    api.fetchPosts().then(posts =>
-      dispatch(receivedPosts(posts)),
+    api.fetchLastPost().then(post =>
+      dispatch(receivedLastPost(post)),
     );
 }
