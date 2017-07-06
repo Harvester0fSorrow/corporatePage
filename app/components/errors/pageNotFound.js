@@ -7,7 +7,7 @@ const PageNotFound = () =>
     <Header />
     <div className="content">
       <div className="box">
-        <h3>Sorry, page not found. It is a pitty cause it really tied this Website together...</h3>
+        <h3>Sorry, page not found. It is a pity cause it really tied this Website together...</h3>
       </div>
     </div>
     <Footer />
