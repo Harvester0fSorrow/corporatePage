@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import DocumentTitle from 'react-document-title';
 import { connect } from 'react-redux';
 import Header from '../components/helpers/header';
 import Footer from '../components/helpers/footer';
@@ -13,22 +14,25 @@ class Blog extends Component {
   }
 
   render() {
-    const { post } = this.props;
+    const { post, title } = this.props;
 
     return (
-      <div className="body">
-        <Header selectedOption="blog" />
-        <div className="content">
-          <Post post={post} />
+      <DocumentTitle title={title}>
+        <div className="body">
+          <Header selectedOption="blog" />
+          <div className="content">
+            <Post post={post} />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </DocumentTitle>
     );
   }
 }
 
 Blog.propTypes = {
   post: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
   fetchLastPost: PropTypes.func.isRequired,
 };
 

@@ -7,6 +7,7 @@ export const selector = createSelector(
   blogSelector,
   blog => ({
     post: blog.post,
+    title: 'Blog',
   }),
 );
 
